@@ -5,7 +5,7 @@ import { createApp } from './app.js'
 
 const { app, store } = createApp()
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const clientDist = path.resolve(__dirname, '../../dist')
+const clientDist = path.resolve(__dirname, '../dist')
 setInterval(() => store.processSecond(), 1_000)
 setInterval(() => store.processAdds(), 10_000)
 app.use(express.static(clientDist))
